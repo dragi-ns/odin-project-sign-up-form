@@ -24,6 +24,7 @@ body {
     font-family: "Roboto", sans-serif;
     display: flex;
     height: 100vh;
+    background-color: #f9fafb;
 }
 
 .sidebar {
