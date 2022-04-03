@@ -12,6 +12,14 @@
     box-sizing: border-box;
 }
 
+input,
+button {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    box-sizing: inherit;
+}
+
 body {
     font-family: "Roboto", sans-serif;
     display: flex;
@@ -54,8 +62,108 @@ body {
     position: absolute;
     bottom: 10px;
     text-align: center;
+    font-size: .9rem;
 }
 
 main {
     flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+.description {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding-left: 50px;
+}
+
+.description p:first-child {
+    margin-bottom: 15px;
+}
+
+#sign-up-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 20px 35px 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#sign-up-form h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+
+.form-row {
+    display: flex;
+    gap: 50px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field input[type="tel"],
+.form-field input[type="password"] {
+    border: 2px solid #E5E7EB;
+    border-radius: 4px;
+    padding: 5px;
+    width: 32ch;
+    transition: all .2s;
+}
+
+.form-field input[type="text"].error,
+.form-field input[type="email"].error,
+.form-field input[type="tel"].error,
+.form-field input[type="password"].error {
+    border-color: #c23f3f;
+}
+
+.form-field .error-message {
+    color: #c23f3f;
+    font-size: .8rem;
+}
+
+.form-field input[type="text"]:focus,
+.form-field input[type="email"]:focus,
+.form-field input[type="tel"]:focus,
+.form-field input[type="password"]:focus {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-color: #416ade;
+}
+
+.create-account-button {
+    background-color: #596D48;
+    border: none;
+    color: white;
+    align-self: flex-start;
+    margin-left: 50px;
+    padding: 15px 60px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.login-instead {
+    margin-left: 50px;
+}
+
+.login-instead a {
+    text-decoration: none;
+    color: #596d48;
+    font-weight: bold;
 }
